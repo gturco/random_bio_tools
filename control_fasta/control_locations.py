@@ -108,7 +108,7 @@ def get_fasta(accn,off_by_one,f,pos_info,fhs):
     strand = accn['strand']
     for start,stop in off_by_one:
         fasta = seq[start-1:stop-1]
-        if len(fasta) == 0:
+        if len(fasta) <  15:
             print start,stop,accn['accn']
             continue
         n += 1
